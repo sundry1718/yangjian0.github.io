@@ -1,0 +1,196 @@
+{include file=comm/head.html}
+
+{include file=comm/top.html}
+
+<div class="container pages">
+	{include file=comm/position.html}
+    
+    <div class="row">
+       	<div class="col-12 col-lg-6 mb-5">
+               <div class="view">
+               	<a class="arrow-left" href="#"></a>
+				<a class="arrow-right" href="#"></a>
+                   <div class="swiper-container">
+                       <div class="swiper-wrapper" >
+                       	   <div class="swiper-slide">
+                               <img src="{content:ico}">
+                           </div>
+                           {pboot:pics num=10 id={content:id}}
+                           <div class="swiper-slide">
+                               <img src="[pics:src]">
+                           </div>
+                           {/pboot:pics}
+                       </div>
+                   </div>
+               </div>
+               
+               <div class="preview mt-3">
+                   <a class="arrow-left" href="#"></a>
+                   <a class="arrow-right" href="#"></a>
+                   <div class="swiper-container" >
+                       <div class="swiper-wrapper">
+                       	<div class="swiper-slide active-nav swiper-slide-active">
+                               <img src="{content:ico}">
+                           </div>
+                           {pboot:pics num=10 id={content:id}}
+                           <div class="swiper-slide">
+                               <img src="[pics:src]" alt="[pics:title]">
+                           </div>
+                           {/pboot:pics}
+                       </div>
+                   </div>
+               </div>
+           </div>
+            
+        	<div class="col-12 col-lg-6 mb-3 pr-3">
+            	<h2 class="border-bottom pb-2 fs-sm-28 fs-20">{content:title}</h2>
+
+                 <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                     	 方法原理：{content:ext_principle}
+                </div> 
+                 <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                     	 测量范围：{content:ext_range}
+                </div>			
+                <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                      	仪表类型：{content:ext_type}
+                </div>
+                <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                      	信号输出：{content:ext_output}
+                </div>
+                <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                     	 仪器适用：{content:ext_apply}
+                </div>                
+                 <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                     	 使用环境：{content:ext_price}
+                </div>				
+                <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                      	浏览次数：{content:visits}
+                </div>				
+                <div class="text-secondary my-3 border-bottom-dashed lh-3">
+                      	上架时间：{content:date style=Y-m-d}
+                </div>
+				
+                <div class="my-3 lh-3">
+                	{pboot:sort scode=11}
+                     <a href="[sort:link]" class="btn btn-danger" target="_blank">马上咨询</a>
+                    {/pboot:sort}
+                </div>
+            </div>
+      </div>
+      
+      <h5 class="border-bottom border-info pb-2 mb-2"><i class="fa fa-sliders" aria-hidden="true"></i> 产品详情</h5>
+      <div class="content">{content:content}</div>
+	<br/>
+	  <!-- 技术电话 --> <font size="4" color="red">
+      <a href="tel:13023690355" target="_blank"><i class="fa fa-phone"></i>相关技术问题咨询:130 2369 0355 / 400 168 7828  </a>
+      </font><!-- 技术电话end --> 
+	<br/><br/>
+	
+	<!--居中对齐的水平线--><hr align="center" width="90%" />
+	<div class="container">来源：网络（杭州阳健仪表整理发布）转载仅为分享知识，如有侵权请联系删除。</div>
+	<br/>
+      <div class="text-secondary lh-2">
+			<p>上一篇：{content:precontent}</p>
+			<p>下一篇：{content:nextcontent}</p>
+      </div>
+	
+	
+	
+	<!--产品推荐-->
+<div class="bg-white py-5">
+    <div class="container">
+    
+      {pboot:sort scode=5}
+      	<div class="text-center fs-26 fs-sm-28 text-success wow fadeInDown">[sort:name]</div>
+      	<div class="text-center fs-14 fs-sm-16 mb-4 text-secondary wow fadeInUp" data-wow-delay="1s">- [sort:subname] -</div>
+      {/pboot:sort}
+      
+      <div class="row">
+       {pboot:list scode=5 num=8 order=date}
+        <div class="col-12 col-sm-6 col-lg-3 wow zoomIn" data-wow-delay="[list:i]00ms" data-wow-duration="1s">
+              <div class="card">
+                  <div class="card-img-150"><a href="[list:link]"><img class="card-img-top" src="[list:ico]" alt="[list:title]"></a></div>
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="[list:link]">[list:title lencn=12]</a></h5>
+                    <p class="card-text">
+	                    {pboot:if([list:istop]==1)}
+	                		<span class="badge badge-danger">置顶</span>
+	                	{/pboot:if}
+	                	{pboot:if([list:isrecommend]==1)}
+	                		<span class="badge badge-warning">推荐</span>
+	                	{/pboot:if}
+	                	{pboot:if([list:isheadline]==1)}
+	                		<span class="badge badge-info">头条</span>
+	                	{/pboot:if}
+	                	[list:content drophtml=1 dropblank=1 len=50]
+                	</p>
+                  </div>
+               </div>
+         </div>
+        {/pboot:list}
+      </div>
+	  {pboot:sort scode=5}
+			<div class="text-center mt-4 wow fadeInDown" data-wow-delay="1s"><h4><a href="[sort:link]" class="text-secondary fs-14 fs-sm-16">查看首页</a></h4></div>
+	  {/pboot:sort}
+    </div>
+</div>
+	
+</div>
+
+{include file=comm/comment.html}
+
+
+
+<script src="{pboot:sitetplpath}/swiper-4.3.5/js/swiper.min.js"></script>
+<script>
+var viewSwiper = new Swiper('.view .swiper-container', {
+	on:{
+		slideChangeTransitionStart: function() {
+		    updateNavPosition()
+	    }
+	}
+})
+
+$('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
+	e.preventDefault()
+	if (viewSwiper.activeIndex == 0) {
+		viewSwiper.slideTo(viewSwiper.slides.length - 1, 1000);
+		return
+	}
+	viewSwiper.slidePrev()
+})
+$('.view .arrow-right,.preview .arrow-right').on('click', function(e) {
+	e.preventDefault()
+	if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+		viewSwiper.slideTo(0, 1000);
+		return
+	}
+	viewSwiper.slideNext()
+})
+
+var previewSwiper = new Swiper('.preview .swiper-container', {
+	//visibilityFullFit: true,
+	slidesPerView: 'auto',
+	allowTouchMove: false,
+	on:{
+		tap: function() {
+		    viewSwiper.slideTo(previewSwiper.clickedIndex)
+	  }
+	}
+})
+
+function updateNavPosition() {
+		$('.preview .active-nav').removeClass('active-nav')
+		var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+		if (!activeNav.hasClass('swiper-slide-visible')) {
+			if (activeNav.index() > previewSwiper.activeIndex) {
+				var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+				previewSwiper.slideTo(activeNav.index() - thumbsPerNav)
+			} else {
+				previewSwiper.slideTo(activeNav.index())
+			}
+		}
+	}
+</script>
+
+{include file=comm/foot.html}

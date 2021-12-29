@@ -1,0 +1,50 @@
+{include file=comm/head.html}
+
+{include file=comm/top.html}
+
+<div class="container pages">
+
+	{include file=comm/position.html}
+  	 
+  	{include file=comm/sortnav.html}
+
+    <h2 class="text-center fs-sm-28 fs-20 mt-3">{content:title}</h2>
+    <div class="text-center border-bottom text-secondary pb-2 mb-3">
+    	  时间：{content:date style=Y-m-d}&nbsp;&nbsp;&nbsp;访问量：{content:visits operate=+1000}
+    </div>
+	<div class="content mb-3">{content:content}</div>
+	<div class="text-secondary lh-2">
+		<p>上一篇：{content:precontent}</p>
+		<p>下一篇：{content:nextcontent}</p>
+	</div>
+</div>
+
+{include file=comm/comment.html}
+
+<!-- 新闻动态 -->
+<div class="bg-white py-5">
+    <div class="container">
+      {pboot:sort scode=2}
+      	<div class="text-center fs-26 fs-sm-28 text-warning wow fadeInDown">[sort:name]</div>
+      	<div class="text-center fs-14 fs-sm-16 mb-5 text-secondary wow fadeInUp" data-wow-delay="1s">- [sort:subname] -</div>
+      {/pboot:sort}
+      
+      <div class="row">
+      	{pboot:list scode=2 num=10 order=date}
+            <div class="col-12 col-lg-6 mb-3 wow fadeInUp" data-wow-delay="500ms">
+                <div class="media mb-3">
+                  <div class="media-body">
+                     <h5><a href="[list:link]" title="[list:title]" target="_blank">[list:title lencn=20]</a></h5>
+                     <p><a href="[list:link]" class="text-secondary lh-2" target="_blank">[list:content drophtml=1 dropblank=1 lencn=60] [list:date style=Y-m-d]</a></p>
+                  </div>
+                </div>
+            </div>
+        {/pboot:list}
+      </div>
+	  {pboot:sort scode=2}
+		<div class="text-center wow fadeInDown" data-wow-delay="1s"><h4><a href="[sort:link]" class="text-secondary fs-14 fs-sm-16" target="_blank">查看更多</a></h4></div>
+	  {/pboot:sort}
+    </div>
+</div>
+	
+{include file=comm/foot.html}
