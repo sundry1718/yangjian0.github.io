@@ -1,17 +1,31 @@
-Note
-====
+Free Responsive HTML5 Template
 
-Responsive, Bootstrap Mobile First Web Template 
-Author URI: http://webthemez.com/
-Description: This theme is a best responsive web template. It would be great for a corporate websites, business websites, personal blog, Portfolio and shopping
-License: Free to use for personal and commercial, but you need to place back link in the bottom of the template(Template by: webthemez.com).
+Above Educational Bootstrap Responsive template is a modern clean multi-purpose html5 template built with valid HTML5 & CSS3. It's build on top of latest Bootstrap framework 3.3.1 fully responsive web compatible with multi browser and devices. This template can be used for multi-purpose needs like Educational Institutes, colleges, Schools, e-Learning, Training centre, Tutors, Charity, Primary School, business, consultancy, agency, personal portfolio, profile and mobile website.
 
 
-Credits
-=======
-Framework  http://getbootstrap.com
-Images	Ryan Schroeder (http://www.flickr.com/photos/ryanschroeder/) via Unsplash (http://unsplash.com - CC0 licensed)
-			"Icefields" (https://www.flickr.com/photos/ryanschroeder/11876741703/)
-Icons	Font Awesome (http://fortawesome.github.com/Font-Awesome/)
-Other	html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-	
+Key features
+-------------
+Twitter Bootstrap 3.3.1
+Clean & Developer-friendly HTML5 and CSS3 code
+100% Responsive Layout Design 
+Multi-purpose theme
+Google Fonts Support
+Font Awesome 
+Smooth Scrolling 
+Fully Customizable
+Contact Form
+
+
+Credits :
+-------
+=> Design and developed: "WebThemez"  http://webthemez.com
+=> Photos used in template: **Unsplash** - http://unsplash.com
+=> For more free web themes: http://webthemez.com
+=> Framework : http://getbootstrap.com
+
+License :
+-------
+**Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
+
+Note:
+All images user here is for demo purpose only, we are not responsible for any copyrights.
