@@ -1,0 +1,33 @@
+{pboot:sort scode={sort:tcode}}
+<div class="nybg" style="background-image: url([sort:pic]);">
+    <div class="container">
+        <div class="row align-items-center nybgt">
+            <div class="nybgt_txt">
+                <div class="nybgt_txth"> [sort:name] </div>
+                <div class="nybgt_txtx"></div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div class="nybgb">
+        <div class="container">
+            <div class="row align-items-center nybgbbig">
+                <div class="nymbx">{pboot:position}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{/pboot:sort}
+
+<div class="nyflqh">
+    <div class="container">
+        <div class="row nyflqhbox"> 
+            {pboot:nav parent={sort:tcode}}
+            <a href="[nav:link]" class="nyflqha {pboot:if('[nav:scode]'=='{sort:scode}' )} on {/pboot:if}"> 
+                [nav:name]
+                <div class="nyflqhadw"> <img src="{pboot:sitedomain}/style/images/sanjiaoxinglan.png" alt=""> </div>
+            </a> 
+            {/pboot:nav}
+        </div>
+    </div>
+</div>

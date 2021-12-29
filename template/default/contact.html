@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-EN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/bootstrap.min.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/swiper.min.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/animate.min.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/font_2461737_iw5mgbjsy8.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/hover-min.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/video-js.min.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/share.min.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/base1.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/common1.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/index1.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/aboutus1.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/news_list1.css">
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/album_list.css">
+<script src="{pboot:sitedomain}/style/js/jquery.min.js"></script>
+<script src="{pboot:sitedomain}/style/js/swiper.min.js"></script>
+<script src="{pboot:sitedomain}/style/js/bootstrap.min.js"></script>
+<script src="{pboot:sitedomain}/style/js/count.js"></script>
+<script src="{pboot:sitedomain}/style/js/video.min.js"></script>
+<script src="{pboot:sitedomain}/style/js/social-share.min.js"></script>
+<script src="{pboot:sitedomain}/style/js/swiper.animate1.0.3.min.js"></script>
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/baguetteBox.min.css">
+<script src="{pboot:sitedomain}/style/js/baguetteBox.min.js"></script>
+</head>
+<body>
+{include file=head.html}
+<!-- 内页背景 -->
+<link rel="stylesheet" href="{pboot:sitedomain}/style/css/contact_content1.css">
+
+{pboot:sort scode={sort:tcode}}
+<div class="nybg" style="background-image: url([sort:pic]);">
+    <div class="container">
+        <div class="row align-items-center nybgt">
+            <div class="nybgt_txt">
+                <div class="nybgt_txth"> [sort:name] </div>
+                <div class="nybgt_txtx"></div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div class="nybgb">
+        <div class="container">
+            <div class="row align-items-center nybgbbig">
+                <div class="nymbx">{pboot:position}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{/pboot:sort}
+
+<!-- 总部联系方式 -->
+<div class="zblxfs">
+    <div class="container">
+        <div class="row">
+            <div class="zblxfs_title">
+                <div class="zblxfs_titlet"> <span></span>
+                    <p>联系我们</p>
+                </div>
+                <div class="zblxfs_titleb"> 如有任何疑问，请通过电子邮件或电话与我们联系，我们将尽快与您联系。 我们期待您的咨询。 </div>
+            </div>
+            <div class="zblxfs_ct">
+                <div class="zblxfs_ctitem">
+                    <div class="zblxfs_ctitemimg"> <img src="{pboot:sitedomain}/style/images/lianxi01.png" alt="tel"> </div>
+                    <div class="zblxfs_ctitemh"> 电话 </div>
+                    <div class="zblxfs_ctitemtxt">
+                        <div> <a href="tel:{pboot:companyphone}">{pboot:companyphone}</a> </div>
+                    </div>
+                </div>
+                <div class="zblxfs_ctitem">
+                    <div class="zblxfs_ctitemimg"> <img src="{pboot:sitedomain}/style/images/lianxi02.png" alt=""> </div>
+                    <div class="zblxfs_ctitemh"> 邮箱 </div>
+                    <div class="zblxfs_ctitemtxt"> <a href="mailto:{pboot:companyemail}">{pboot:companyemail}</a> </div>
+                </div>
+                <div class="zblxfs_ctitem">
+                    <div class="zblxfs_ctitemimg"> <img src="{pboot:sitedomain}/style/images/lianxi03.png" alt=""> </div>
+                    <div class="zblxfs_ctitemh"> 传真 </div>
+                    <div class="zblxfs_ctitemtxt"> {pboot:companyfax} </div>
+                </div>
+                <div class="zblxfs_ctitem">
+                    <div class="zblxfs_ctitemimg"> <img src="{pboot:sitedomain}/style/images/lianxi04.png" alt=""> </div>
+                    <div class="zblxfs_ctitemh"> 地址 </div>
+                    <div class="zblxfs_ctitemtxt" id="liuyan"> {pboot:companyaddress} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 留言表单 -->
+<div class="lybd">
+    <div class="container">
+        <div class="row">
+            <div class="zblxfs_title">
+                <div class="zblxfs_titlet"> <span></span>
+                    <p>留言</p>
+                </div>
+            </div>
+            <div class="lybd_ct">
+                <form method="post" class="lybd_ctbd" action="{pboot:msgaction}">
+
+                    <div class="lybd_ctbdt">
+                        <div class="lybd_ctbdl">
+                            <div class="lybd_ctbdl_item">
+                                <div class="lybd_ctbdl_iteml"> <span>姓名: </span><b>*</b> </div>
+                                <div class="lybd_ctbdl_itemr">
+                                    <input type="text" name="contacts" value="" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="lybd_ctbdl_item">
+                                <div class="lybd_ctbdl_iteml"> <span>邮箱: </span><b>*</b> </div>
+                                <div class="lybd_ctbdl_itemr">
+                                    <input type="email" name="email" value="" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="lybd_ctbdl_item">
+                                <div class="lybd_ctbdl_iteml"> <span>联系方式: </span><b>*</b> </div>
+                                <div class="lybd_ctbdl_itemr">
+                                    <input type="text" name="mobile" value="" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="lybd_ctbdl_item">
+                                <div class="lybd_ctbdl_iteml"> <span>公司: </span> </div>
+                                <div class="lybd_ctbdl_itemr">
+                                    <input type="text" name="gongsi" value="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lybd_ctbdr">
+                            <div class="lybd_ctbdrt"> <span>留言内容</span> </div>
+                            <div class="lybd_ctbdrb">
+                                <textarea name="content" cols="30" rows="10" class="lybd_ctbdrb_tep" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lybd_ctbdb">
+                        <input type="submit" value="提交" id="submit" name="submit">
+                        <input type="reset" value="重置" class="lybd_ctbdbcz">
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 其他联系方式 -->
+
+
+<!-- 底部 -->
+{include file=foot.html}
