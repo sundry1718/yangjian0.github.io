@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="renderer"  content="webkit">
-  <title>{CMSNAME}管理中心-V{APP_VERSION}-{RELEASE_TIME}</title>
+  <title>后台管理中心-V{APP_VERSION}-{RELEASE_TIME}</title>
   <link rel="shortcut icon" href="{SITE_DIR}/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="{APP_THEME_DIR}/layui/css/layui.css?v=v2.5.4">
   <link rel="stylesheet" href="{APP_THEME_DIR}/font-awesome/css/font-awesome.min.css?v=v4.7.0" type="text/css">
@@ -29,8 +29,7 @@
   <div class="layui-header">
     <div class="layui-logo">
     <a href="{url./admin/Index/home}">
-    <img src="{APP_THEME_DIR}/images/logo.png" height="30">
-	    {CMSNAME} 
+	    后台管理
 	   	{if(LICENSE==3)}
 	   		<span class="layui-badge">SVIP</span>
 	   	{else}
@@ -63,7 +62,7 @@
        </li>
 
        <li class="layui-nav-item layui-hide-xs">
-       		<a href="{url./admin/Index/clearCache}" class="ajaxlink"><i class="fa fa-trash-o" aria-hidden="true"></i> 清理缓存</a>
+       		<a href="{url./admin/Index/clearCache}"><i class="fa fa-trash-o" aria-hidden="true"></i> 清理缓存</a>
        </li>
        
        <li class="layui-nav-item layui-hide-xs">
@@ -73,10 +72,8 @@
 	        <dl class="layui-nav-child">
 	          <dd><a href="{url./admin/Index/ucenter}"><i class="fa fa-address-card-o" aria-hidden="true"></i> 密码修改</a></dd>
 	          <dd><a href="{url./admin/Index/loginOut}"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出登录</a></dd>
-	          {if(session('ucode')==10001)}
-	          	<dd><a href="{url./admin/Upgrade/index}"><i class="fa fa-cloud-upload" aria-hidden="true"></i> 在线更新</a></dd>
-	          	<dd><a href="{url./admin/Index/clearSession}" class="ajaxlink"><i class="fa fa-trash-o" aria-hidden="true"></i> 清理会话</a></dd>
-	          {/if}
+	          <dd><a href="{url./admin/Upgrade/index}"><i class="fa fa-cloud-upload" aria-hidden="true"></i> 在线更新</a></dd>
+	          <dd><a href="{url./admin/Index/clearSession}"><i class="fa fa-trash-o" aria-hidden="true"></i> 清理会话</a></dd>
 	        </dl>
       </li>
     </ul>

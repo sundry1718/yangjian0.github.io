@@ -5,10 +5,10 @@ return array(
     'cmsname' => 'PbootCMS',
     
     // 授权码，多个授权码使用英文逗号隔开，如：'aaaaa,bbbbb'
-    'sn' => '6DAA9530C1,E2F454719A',
+    'sn' => '3C307C21C1,DF799203EC',
     
     // 授权用户手机
-    'sn_user' => '6DAA9530C1,E2F454719A',
+    'sn_user' => '',
     
     // 模板内容输出缓存开关
     'tpl_html_cache' => 0,
